@@ -6,6 +6,8 @@ I was trying to get this to work with docker-compose, but was running int issues
 
 For now, it's a manual process which I followed from [this video](https://www.youtube.com/watch?v=N8BkmdZzxDg).
 
+Make sure you have [redis-cli](https://redis.io/docs/install/install-redis/) installed.
+
 ### 1. Install dependencies
 
 ```
