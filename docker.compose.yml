@@ -1,0 +1,85 @@
+version: "3"
+services:
+  redis1:
+    image: bitnami/redis-cluster:latest
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_NODES=redis1,redis2,redis3,redis4,redis5,redis6
+    ports:
+      - 7000:6379
+    volumes:
+      - ./7000:/redis
+    networks:
+      - redis-cluster-network
+
+  redis2:
+    image: bitnami/redis-cluster:latest
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_NODES=redis1,redis2,redis3,redis4,redis5,redis6
+    ports:
+      - 7001:6379
+    volumes:
+      - ./7001:/redis
+    networks:
+      - redis-cluster-network
+
+  redis3:
+    image: bitnami/redis-cluster:latest
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_NODES=redis1,redis2,redis3,redis4,redis5,redis6
+    ports:
+      - 7002:6379
+    volumes:
+      - ./7002:/redis
+    networks:
+      - redis-cluster-network
+
+  redis4:
+    image: bitnami/redis-cluster:latest
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_NODES=redis1,redis2,redis3,redis4,redis5,redis6
+    ports:
+      - 7003:6379
+    volumes:
+      - ./7003:/redis
+    networks:
+      - redis-cluster-network
+
+  redis5:
+    image: bitnami/redis-cluster:latest
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_NODES=redis1,redis2,redis3,redis4,redis5,redis6
+    ports:
+      - 7004:6379
+    volumes:
+      - ./7004:/redis
+    networks:
+      - redis-cluster-network
+
+  redis6:
+    image: bitnami/redis-cluster:latest
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_NODES=redis1,redis2,redis3,redis4,redis5,redis6
+      - REDIS_CLUSTER_CREATOR=yes
+      - REDIS_CLUSTER_REPLICAS=1
+    ports:
+      - 7005:6379
+    volumes:
+      - ./7005:/redis
+    networks:
+      - redis-cluster-network
+    depends_on:
+      - redis1
+      - redis2
+      - redis3
+      - redis4
+      - redis5
+
+networks:
+  redis-cluster-network:
+    driver: bridge

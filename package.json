@@ -1,0 +1,21 @@
+{
+  "name": "redis-cluster",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx ts-node index.ts",
+    "clean": "rm 7000/nodes.conf 7001/nodes.conf 7002/nodes.conf 7003/nodes.conf 7004/nodes.conf 7005/nodes.conf"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "redis": "^4.6.10"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.9",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
