@@ -1,6 +1,6 @@
-## Getting started
-
 Repo to test connecting to redis clusters with `redis` nodejs client library.
+
+## Getting started
 
 I was trying to get this to work with docker-compose, but was running int issues. I will work on that later.
 
