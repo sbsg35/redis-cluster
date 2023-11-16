@@ -16,7 +16,6 @@ npm run start # start redis nodes
 
 ```
 npm run create # create cluster
-
 ```
 
 ```
