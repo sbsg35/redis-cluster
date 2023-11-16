@@ -2,3 +2,8 @@ node_modules
 appendonlydir
 nodes.conf
 dump.rdb
+
+appendonlydir*
+700*
+redisnodes*
+dump*
