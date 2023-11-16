@@ -8,21 +8,9 @@ brew install redis
 
 ```
 npm i
-```
-
-```
 npm run start # start redis nodes
-```
-
-```
 npm run create # create cluster
-```
-
-```
 npm run stop # stop cluster
-```
-
-```
 npm run clean # cleanup
 ```
 
