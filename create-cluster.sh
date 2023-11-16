@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# copied from https://github.com/redis/redis/blob/unstable/utils/create-cluster/create-cluster
 
 # Settings
 CLUSTER_HOST=127.0.0.1

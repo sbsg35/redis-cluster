@@ -1,29 +1,34 @@
-Repo to test connecting to redis clusters with `redis` nodejs client library.
+# Redis cluster local setup
+
+Repo to test redis clusters locally. You need `redis` installed on your machine. This will work on Macos, can't guarantee other OS.
+
+```
+brew install redis
+```
 
 ```
 npm i
 ```
 
-Start redis nodes
-
 ```
-npm run start
+npm run start # start redis nodes
 ```
 
-Create cluster
+```
+npm run create # create cluster
 
 ```
-npm run create
-```
-
-Stop cluster
 
 ```
-npm run stop
+npm run stop # stop cluster
 ```
 
-Clean up
+```
+npm run clean # cleanup
+```
 
-```
-npm run clean
-```
+## Updating settings
+
+You can update the cluster settings in the `create-cluster.sh` file.
+
+Shell script original source: https://github.com/redis/redis/blob/unstable/utils/create-cluster/create-cluster
