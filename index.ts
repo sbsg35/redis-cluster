@@ -1,6 +1,6 @@
 import * as Redis from "ioredis";
 
-const myF = async () => {
+const startCluster = async () => {
   const cluster = new Redis.Cluster([
     {
       port: 7000,
@@ -17,14 +17,12 @@ const myF = async () => {
   ]);
   try {
     cluster.on("node error", (err) => console.error(err));
-    const d = await cluster.set("name123", "raj");
-    console.log(await cluster.get("name123"));
-    console.log({ d });
+    console.log(await cluster.set("name123", "raj"));
   } catch (error) {
-    console.error({ error });
+    console.error(error);
   } finally {
     cluster.quit();
   }
 };
 
-myF();
+startCluster();
